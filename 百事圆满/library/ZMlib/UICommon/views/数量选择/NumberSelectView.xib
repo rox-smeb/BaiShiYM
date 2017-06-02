@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQh-dF-M8G" userLabel="数量选择" customClass="NumberSelectView">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="28"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuY-bP-BUN" userLabel="减号">
+                    <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="jVj-ck-p8C"/>
+                    </constraints>
+                    <state key="normal" image="-">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSub:" destination="UQh-dF-M8G" eventType="touchUpInside" id="Gxs-or-Zgk"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FpM-ua-37O" customClass="NumberTextField">
+                    <rect key="frame" x="30" y="0.0" width="55" height="30"/>
+                    <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="UQh-dF-M8G" id="as7-AI-0su"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCY-8H-yym" userLabel="加号">
+                    <rect key="frame" x="87" y="0.0" width="28" height="28"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="rwe-hs-Ism"/>
+                    </constraints>
+                    <state key="normal" image="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onAdd:" destination="UQh-dF-M8G" eventType="touchUpInside" id="jbH-69-ODw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dCY-8H-yym" secondAttribute="bottom" id="1Xc-NW-ZAV"/>
+                <constraint firstAttribute="bottom" secondItem="FpM-ua-37O" secondAttribute="bottom" id="811-iJ-ub9"/>
+                <constraint firstItem="FpM-ua-37O" firstAttribute="leading" secondItem="EuY-bP-BUN" secondAttribute="trailing" constant="2" id="N3g-Hq-6Ng"/>
+                <constraint firstItem="EuY-bP-BUN" firstAttribute="leading" secondItem="UQh-dF-M8G" secondAttribute="leading" id="T9f-dn-b8B"/>
+                <constraint firstItem="FpM-ua-37O" firstAttribute="top" secondItem="UQh-dF-M8G" secondAttribute="top" id="Uza-ns-e3O"/>
+                <constraint firstItem="EuY-bP-BUN" firstAttribute="top" secondItem="UQh-dF-M8G" secondAttribute="top" id="Z7r-FW-o2p"/>
+                <constraint firstItem="dCY-8H-yym" firstAttribute="leading" secondItem="FpM-ua-37O" secondAttribute="trailing" constant="2" id="ZDW-2x-LFO"/>
+                <constraint firstItem="dCY-8H-yym" firstAttribute="top" secondItem="UQh-dF-M8G" secondAttribute="top" id="gOd-1I-Ehs"/>
+                <constraint firstAttribute="trailing" secondItem="dCY-8H-yym" secondAttribute="trailing" id="rhY-sC-41b"/>
+                <constraint firstAttribute="bottom" secondItem="EuY-bP-BUN" secondAttribute="bottom" id="u6w-6s-c1m"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="dCY-8H-yym" id="fKd-5c-fdD"/>
+                <outlet property="numTextField" destination="FpM-ua-37O" id="hKQ-Ld-0Sw"/>
+                <outlet property="subButton" destination="EuY-bP-BUN" id="lD0-c8-bXw"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="+" width="57" height="57"/>
+        <image name="-" width="57" height="57"/>
+    </resources>
+</document>

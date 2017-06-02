@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Nq0-G1-6Qe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="U8Y-Ce-XBZ">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nq0-G1-6Qe" customClass="MainTabBarController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="CRg-vy-cG4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4SQ-x6-c3I" kind="relationship" relationship="viewControllers" id="dJs-rk-Dub"/>
+                        <segue destination="gu4-fs-JnA" kind="relationship" relationship="viewControllers" id="GeZ-ha-f5H"/>
+                        <segue destination="aRg-BO-XtY" kind="relationship" relationship="viewControllers" id="gOp-n4-G4t"/>
+                        <segue destination="5US-AX-Dmc" kind="relationship" relationship="viewControllers" id="fRe-kA-K2f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Om-fl-FLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="456"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="4G7-9C-NMH">
+            <objects>
+                <navigationController restorationIdentifier="HomeTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="4SQ-x6-c3I" userLabel="首页" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabItem1_nor" id="ov8-gx-5CY">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fBH-1c-imu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dm6-28-dDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="1241"/>
+        </scene>
+        <!--购物车-->
+        <scene sceneID="bZJ-q6-CIr">
+            <objects>
+                <navigationController restorationIdentifier="ShopCartViewController" automaticallyAdjustsScrollViewInsets="NO" id="aRg-BO-XtY" userLabel="购物车" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabItem3_nor" id="XH5-dw-MdZ">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="100"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZAe-3y-0HU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VX4-Sp-Bl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="1241"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="SuD-bn-JYp">
+            <objects>
+                <navigationController restorationIdentifier="MineTableViewController" id="5US-AX-Dmc" userLabel="我的" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabItem4_nor" id="aBh-N3-YxC">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="emC-ZQ-TWV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJv-oe-jAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="1241"/>
+        </scene>
+        <!--商城-->
+        <scene sceneID="jL7-DY-FMf">
+            <objects>
+                <navigationController restorationIdentifier="SortTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="gu4-fs-JnA" userLabel="商城" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabItem2_nor" id="zcO-Tq-OTe">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FEF-P1-tXl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlI-Hm-rb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="1241"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabItem1_nor" width="35" height="35"/>
+        <image name="TabItem2_nor" width="35" height="35"/>
+        <image name="TabItem3_nor" width="35" height="35"/>
+        <image name="TabItem4_nor" width="35" height="35"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

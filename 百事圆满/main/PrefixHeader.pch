@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  车联网-修理厂端
+//
+//  Created by AnYanbo on 16/6/6.
+//  Copyright © 2016年 AnYanbo. All rights reserved.
+//
+
+#ifndef _____PrefixHeader_pch
+#define _____PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+
+#import "YBCommonKit.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+#import "MBProgressHUD.h"
+#import "CommonEmptyListView.h"
+
+#import <CoreMedia/CoreMedia.h>
+
+#import "MacroDefine.h"
+#import "AppURL.h"
+
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+
+#define WEAKSELF(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#endif

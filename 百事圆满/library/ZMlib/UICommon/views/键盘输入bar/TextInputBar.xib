@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcs-UK-Oh1" customClass="TextInputBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-G7-nn2">
+                    <rect key="frame" x="15" y="8" width="245" height="35"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="添加评论" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hpD-Sc-rCU">
+                            <rect key="frame" x="10" y="0.0" width="230" height="35"/>
+                            <color key="textColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="jcs-UK-Oh1" id="YRY-xi-7cv"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="hpD-Sc-rCU" firstAttribute="leading" secondItem="x6L-G7-nn2" secondAttribute="leading" constant="10" id="GfI-DO-DH4"/>
+                        <constraint firstItem="hpD-Sc-rCU" firstAttribute="top" secondItem="x6L-G7-nn2" secondAttribute="top" id="IP9-R2-4lC"/>
+                        <constraint firstAttribute="trailing" secondItem="hpD-Sc-rCU" secondAttribute="trailing" constant="5" id="dLB-Bn-Zik"/>
+                        <constraint firstAttribute="height" constant="35" id="oyz-DQ-V9q"/>
+                        <constraint firstAttribute="bottom" secondItem="hpD-Sc-rCU" secondAttribute="bottom" id="vwY-3w-PAy"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-4F-bMB">
+                    <rect key="frame" x="270" y="8" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dAN-4F-bMB" secondAttribute="height" multiplier="1:1" id="87E-gj-7cx"/>
+                    </constraints>
+                    <state key="normal" image="发送"/>
+                    <state key="highlighted" image="发送1"/>
+                    <connections>
+                        <action selector="onPublishTouch:" destination="jcs-UK-Oh1" eventType="touchUpInside" id="066-sE-2mR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="x6L-G7-nn2" firstAttribute="centerY" secondItem="jcs-UK-Oh1" secondAttribute="centerY" id="BwE-9N-T37"/>
+                <constraint firstItem="dAN-4F-bMB" firstAttribute="top" secondItem="x6L-G7-nn2" secondAttribute="top" id="Zk8-UX-EHZ"/>
+                <constraint firstItem="x6L-G7-nn2" firstAttribute="leading" secondItem="jcs-UK-Oh1" secondAttribute="leading" constant="15" id="dTP-LY-Icg"/>
+                <constraint firstItem="dAN-4F-bMB" firstAttribute="leading" secondItem="x6L-G7-nn2" secondAttribute="trailing" constant="10" id="eAP-vu-RTV"/>
+                <constraint firstAttribute="trailing" secondItem="dAN-4F-bMB" secondAttribute="trailing" constant="15" id="rYy-ag-nZ8"/>
+                <constraint firstItem="dAN-4F-bMB" firstAttribute="centerY" secondItem="jcs-UK-Oh1" secondAttribute="centerY" id="x4b-Lz-oId"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputContainer" destination="x6L-G7-nn2" id="rog-fK-SNg"/>
+                <outlet property="inputTextField" destination="hpD-Sc-rCU" id="Pkf-QP-1Iu"/>
+                <outlet property="publishBtn" destination="dAN-4F-bMB" id="Hw7-M3-LX5"/>
+            </connections>
+            <point key="canvasLocation" x="316" y="508"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="发送" width="128" height="128"/>
+        <image name="发送1" width="128" height="128"/>
+    </resources>
+</document>
